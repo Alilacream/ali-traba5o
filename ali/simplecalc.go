@@ -7,6 +7,7 @@ import "strconv"
 import "math"
 var ErrDividedO error = errors.New("division by zero is impossible") 
 	var NotNumber error = errors.New("Not A numericale number.")
+		
 	func add(nb,nb1 float64) float64 {
 	return nb + nb1
 }
@@ -76,5 +77,7 @@ func main() {
 			default:
 				fmt.Println("Function is not understandble. Pls use the allowed opperateurs:\n+ | - | * | / | %.")
 			}		
+				
+
 		
 }
