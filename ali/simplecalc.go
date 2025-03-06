@@ -1,4 +1,4 @@
-package main
+package ali
 
 import "fmt"
 import "os"
@@ -36,7 +36,7 @@ func mod(nb,nb1 float64) (float64, error) {
 }
 
 
-func main() {
+func ali() {
 	if len(os.Args)-1 != 3 {
 		fmt.Println("only three arguments allowed")
 				os.Exit(1)

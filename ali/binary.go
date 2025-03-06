@@ -1,6 +1,6 @@
 package ali
 
-import "fmt"
+
 
 
 func Binary(nb int64) []int {
