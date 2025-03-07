@@ -17,9 +17,9 @@ func Sqrt(nb int64) int64 {
 	}
 	x :=  nb / 2 
 	var	l float64= 0.00001
-		
+		y := x + nb/x
 		for {
-			guess := (x+nb/x)/2 
+			guess := (x+y)/2 
 			if float64(abs(guess - x)) < l {
 				break
 			} 
