@@ -105,6 +105,7 @@ func (s *Student) free() *Student {
 	}
 	return nil
 }
+
 func main() {
 	var list *Student
 	list = list.createStudent("Ali", 18, []int{0, 60, 75})
@@ -112,7 +113,7 @@ func main() {
 	list = addList(list, "Amine", 19, []int{50, 75, 90})
 	list.Show()
 	w.Add(1)
-	ProcessList(list, &w)
+	go ProcessList(list, &w)
 	w.Wait()
 	list.free()
 	fmt.Println("the list is free now:")
