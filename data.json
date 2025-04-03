@@ -1,6 +1,5 @@
 {
-    "id" :"4",
-    "name": "Dinani",
-    "age": 26,
-    "note": 17.5
+    "stat": "4",
+    "todo": "Workout",
+    "done": false
 }
