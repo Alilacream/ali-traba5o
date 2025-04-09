@@ -7,29 +7,25 @@ type Todo struct {
 	Done bool   `json:"done"`
 }
 type Error struct {
-	Message string
+	Msg string
 }
-var todos = []Todo{
-	{Stat: "1", Todo: "Clean room", Done: true},
-	{Stat: "2", Todo: "Salat", Done: true},
-	{Stat: "3", Todo: "Learning", Done: false},
 
-}
-func Reverse(todoe Todo) {
+func Reverse(todoe *Todo) {
 	todoe.Done = !(todoe.Done)
 }
-func Free(todoe Todo) {
+func Free(todoe *Todo) {
 	//todoe = nil
 	todoe.Stat = ""
 	todoe.Todo = ""
 	todoe.Done = false
 }
-func Helpertodo(stat string) (*Todo, *Error) {
-	not := &Error{Message:"not FOUND"}
+func Helpertodo(stat string,list []Todo) (*Todo, *Error) {
+	not := &Error{Msg:"not FOUND"}
+
 	
-	for i, ele := range todos {
+	for i, ele := range list {
 		if ele.Stat == stat {
-			return &todos[i],nil 
+			return &list[i],nil 
 		}
 	}
 	return nil, not
