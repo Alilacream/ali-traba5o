@@ -86,7 +86,8 @@ func deleteTodo(ctx *gin.Context) {
 }
 */
 func main() {
-	server := gin.Default()
+	fmt.Println("🚀 I built this. From scratch. I’m HIM.")
+	server := gin.Default()	
 	server.GET("/todo", Gettodo)
 	server.POST("/todo", Newtodo)
 	server.GET("/todo/:stat", GetbyidTodo)
